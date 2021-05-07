@@ -1,0 +1,100 @@
+
+$color-primary : rgb(0, 105, 235);
+$color-warn : rgb(255, 170, 0);
+$color-alert : rgb(212, 0, 120);
+$text-color : white;
+$violet : #7100c8;
+$ui-font-size:14px;
+$ui-font-color:whitesmoke;
+$ui-control-background : #444;
+$ui-font-family : Avenir, Helvetica, Arial, sans-serif;
+
+.primary {
+      background-color:$color-primary;
+      transition-property: background-color;
+      transition-duration: 0.3s;
+      color: $ui-font-color;
+      &:hover {
+            background-color : adjust-color($color: $color-primary, $lightness: 10)!important;
+      }
+      &:active{
+            background-color : adjust-color($color: $color-primary, $lightness: -10)!important; 
+      }
+}
+
+.warn {
+      background-color:$color-warn;
+      transition-property: background-color;
+      transition-duration: 0.3s;
+      color: $ui-font-color;
+      &:hover {
+            background-color : adjust-color($color: $color-warn, $lightness: 10)!important;
+      }
+      &:active{
+            background-color : adjust-color($color: $color-warn, $hue: -10)!important; 
+      }
+}
+.alert {
+      background-color:$color-alert;
+      transition-property: background-color;
+      transition-duration: 0.3s;
+      color: $ui-font-color;
+      &:hover {
+            background-color : adjust-color($color: $color-alert, $lightness: 10)!important;
+      }
+      &:active{
+            background-color : adjust-color($color: $color-alert, $hue: 10)!important; 
+      }
+}
+.violet {
+      background-color: $violet;
+      transition-property: background-color;
+      transition-duration: 0.3s;
+      color: $ui-font-color;
+      &:hover {
+            background-color : adjust-color($color: $violet, $lightness: 10)!important;
+      }
+      &:active{
+            background-color : adjust-color($color: $violet, $hue: 10)!important; 
+      }
+}
+html{
+      font-size: $ui-font-size;
+}
+
+body{
+      background-color: #444;
+      margin: 0 auto;
+      font-family: $ui-font-family;
+      -webkit-font-smoothing: antialiased;
+      
+      text-align: center;
+      color: $ui-control-background;
+  }
+  #app{
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+      align-items: stretch;
+  }
+  .header{
+      background-color: $ui-control-background;
+      height: 26px;
+      width: 100%;
+      -webkit-app-region:drag;
+      color: $ui-font-color;
+  }
+  .title{
+      user-select: none;
+      margin: 0px;
+      padding: 0.5em;
+      display: inline;
+  }
+  .main-content{
+      width: 100vw;
+      display: flex;
+      align-items: stretch;
+      flex-direction: column;
+      flex-grow: 1;
+  }
